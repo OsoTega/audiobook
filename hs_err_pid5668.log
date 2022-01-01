@@ -1,0 +1,194 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/share/memory/allocation.cpp:45), pid=5668, tid=8016
+#
+# JRE version:  (13.0.2+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (13.0.2+8, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=Cp1252 audiobook.MainServer
+
+Host: Intel(R) Celeron(R) CPU  N3050  @ 1.60GHz, 2 cores, 1G,  Windows 10 , 64 bit Build 10586 (10.0.10586.0)
+Time: Mon Aug 31 14:45:46 2020 W. Central Africa Standard Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001f9d6b54800):  JavaThread "Unknown thread" [_thread_in_vm, id=8016, stack(0x0000006944b00000,0x0000006944c00000)]
+
+Stack: [0x0000006944b00000,0x0000006944c00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x624f9a]
+V  [jvm.dll+0x770cfa]
+V  [jvm.dll+0x7724af]
+V  [jvm.dll+0x772ab3]
+V  [jvm.dll+0x24bf08]
+V  [jvm.dll+0xb8d8f]
+V  [jvm.dll+0x2e110d]
+V  [jvm.dll+0x74dd68]
+V  [jvm.dll+0x361989]
+V  [jvm.dll+0x730e65]
+V  [jvm.dll+0x3cc53f]
+V  [jvm.dll+0x3ce861]
+C  [jli.dll+0x51ff]
+C  [ucrtbase.dll+0x6be1d]
+C  [KERNEL32.DLL+0x18102]
+C  [ntdll.dll+0x5c264]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007fff9051ccb8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fff90195eb7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+
+[error occurred during error reporting (printing compressed oops mode), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fff8fc82227]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (8 events):
+Event: 0.021 Loaded shared library C:\Program Files\Java\jdk-13.0.2\bin\zip.dll
+Event: 0.023 Loaded shared library C:\Program Files\Java\jdk-13.0.2\bin\jimage.dll
+Event: 0.025 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjava.base-coop.dll failed, error code 126
+Event: 0.025 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjava.logging-coop.dll failed, error code 126
+Event: 0.025 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjdk.compiler-coop.dll failed, error code 126
+Event: 0.025 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjdk.scripting.nashorn-coop.dll failed, error code 126
+Event: 0.026 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjdk.internal.vm.ci-coop.dll failed, error code 126
+Event: 0.026 Loading shared library C:\Program Files\Java\jdk-13.0.2\lib\libjdk.internal.vm.compiler-coop.dll failed, error code 126
+
+
+Dynamic libraries:
+0x00007ff6c2010000 - 0x00007ff6c201f000 	C:\Program Files\Java\jdk-13.0.2\bin\javaw.exe
+0x00007fffbbd20000 - 0x00007fffbbee1000 	C:\windows\SYSTEM32\ntdll.dll
+0x00007fffb95d0000 - 0x00007fffb967d000 	C:\windows\system32\KERNEL32.DLL
+0x00007fffb8760000 - 0x00007fffb8948000 	C:\windows\system32\KERNELBASE.dll
+0x00007fffa6ca0000 - 0x00007fffa6cb8000 	C:\Program Files\Java\jdk-13.0.2\bin\jli.dll
+0x00007fffb9770000 - 0x00007fffb9817000 	C:\windows\system32\ADVAPI32.dll
+0x00007fffb9820000 - 0x00007fffb98bd000 	C:\windows\system32\msvcrt.dll
+0x00007fffb9550000 - 0x00007fffb95ab000 	C:\windows\system32\sechost.dll
+0x00007fffb98c0000 - 0x00007fffb99dc000 	C:\windows\system32\RPCRT4.dll
+0x00007fffbbb00000 - 0x00007fffbbc56000 	C:\windows\system32\USER32.dll
+0x00007fffbb670000 - 0x00007fffbb7f6000 	C:\windows\system32\GDI32.dll
+0x00007fff9b890000 - 0x00007fff9b8a5000 	C:\Program Files\Java\jdk-13.0.2\bin\VCRUNTIME140.dll
+0x00007fffb74e0000 - 0x00007fffb75d4000 	C:\windows\SYSTEM32\ucrtbase.dll
+0x00007fffabe30000 - 0x00007fffac0a4000 	C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10586.0_none_8c15ae12515e1c22\COMCTL32.dll
+0x00007fffbb390000 - 0x00007fffbb60d000 	C:\windows\system32\combase.dll
+0x00007fffb8a60000 - 0x00007fffb8aca000 	C:\windows\system32\bcryptPrimitives.dll
+0x00007fffab0f0000 - 0x00007fffab0fa000 	C:\windows\SYSTEM32\VERSION.dll
+0x00007fffbb350000 - 0x00007fffbb38b000 	C:\windows\system32\IMM32.DLL
+0x00007fff936c0000 - 0x00007fff9375b000 	C:\Program Files\Java\jdk-13.0.2\bin\msvcp140.dll
+0x00007fff8fa60000 - 0x00007fff905bd000 	C:\Program Files\Java\jdk-13.0.2\bin\server\jvm.dll
+0x00007fffbbc60000 - 0x00007fffbbc68000 	C:\windows\system32\PSAPI.DLL
+0x00007fffb03e0000 - 0x00007fffb03e9000 	C:\windows\SYSTEM32\WSOCK32.dll
+0x00007fffbb2e0000 - 0x00007fffbb34b000 	C:\windows\system32\WS2_32.dll
+0x00007fffb6680000 - 0x00007fffb66a3000 	C:\windows\SYSTEM32\WINMM.dll
+0x00007fffb6620000 - 0x00007fffb664c000 	C:\windows\SYSTEM32\WINMMBASE.dll
+0x00007fffb85c0000 - 0x00007fffb8603000 	C:\windows\system32\cfgmgr32.dll
+0x00007fffb83b0000 - 0x00007fffb83bf000 	C:\windows\system32\kernel.appcore.dll
+0x00007fffb18c0000 - 0x00007fffb18d0000 	C:\Program Files\Java\jdk-13.0.2\bin\verify.dll
+0x00007fffaff50000 - 0x00007fffb00dc000 	C:\windows\SYSTEM32\DBGHELP.DLL
+0x00007fffb54a0000 - 0x00007fffb54c5000 	C:\windows\SYSTEM32\dbgcore.DLL
+0x00007fffa8550000 - 0x00007fffa8576000 	C:\Program Files\Java\jdk-13.0.2\bin\java.dll
+0x00007fff9f2c0000 - 0x00007fff9f2d7000 	C:\Program Files\Java\jdk-13.0.2\bin\zip.dll
+0x00007fffb1150000 - 0x00007fffb115a000 	C:\Program Files\Java\jdk-13.0.2\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-13.0.2\bin;C:\windows\SYSTEM32;C:\windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10586.0_none_8c15ae12515e1c22;C:\Program Files\Java\jdk-13.0.2\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=Cp1252 
+java_command: audiobook.MainServer
+java_class_path (initial): C:\Users\osowa steve tega\eclipse-workspace\audiobook\target\classes;C:\Users\osowa steve tega\.m2\repository\com\sparkjava\spark-core\2.5\spark-core-2.5.jar;C:\Users\osowa steve tega\.m2\repository\org\eclipse\jetty\jetty-server\9.3.6.v20151106\jetty-server-9.3.6.v20151106.jar;C:\Users\osowa steve tega\.m2\repository\javax\servlet\javax.servlet-api\3.1.0\javax.servlet-api-3.1.0.jar;C:\Users\osowa steve tega\.m2\repository\org\eclipse\jetty\jetty-http\9.3.6.v20151106\jetty-http-9.3.6.v20151106.jar;C:\Users\osowa steve tega\.m2\repository\org\eclipse\jetty\jetty-util\9.3.6.v20151106\jetty-util-9.3.6.v20151106.jar;C:\Users\osowa steve tega\.m2\repository\org\eclipse\jetty\jetty-io\9.3.6.v20151106\jetty-io-9.3.6.v20151106.jar;C:\Users\osowa steve tega\.m2\repository\org\eclipse\jetty\jetty-webapp\9.3.6.v20151106\jetty-webapp-9.3.6.v20151106.jar;C:\Users\osowa steve tega\.m2\repository\org\eclipse\jetty\jetty-xml\9.3.6.v20151106\jetty-xml-9.3.6.v20151106.jar;C:\Users\osowa steve tega\.m2\repository\org\eclipse\jetty\jetty-servlet\9.3.6.v20151106\jetty-servlet-9.3.6.v20151106.jar;C:\Users\osowa steve tega\.m2\repository\org\eclipse\jetty\jetty-security\9.3.6.v20151106\jetty-security-9.3.6.v20151106.jar;C:\Users\osowa steve tega\.m2\repository\org\eclipse\jetty\websocket\websocket-server\9.3.6.v20151106\websocket-server-9.3.6.v20151106.jar;C:\Users\osowa steve tega\.m2\repository\org\eclipse\jetty\websocket\websocket-common\9.3.6.v20151106\websocket-common-9.3.6.v20151106.jar;C:\Users\osowa steve tega\.m2\repository\org\eclipse\jetty\websocket\websocket-client\9.3.6.v20151106\websocket-client-9.3.6.v20151106.jar;C:\Users\osowa steve tega\.m2\repository\org\eclipse\jetty\websocket\websocket-servlet\9.3.6.v20151106\websocket-servlet-9.3.6.v20151106.jar;C:\Users\osowa steve tega\.m2\repository\org\eclipse\jetty\websocket\websocket-api\9.3.6.v20151106\websocket-api-9.3.6.v20151106.jar;C:\Users\osowa steve tega\.m2\repository\com\sparkjava\spark-te
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 2                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 31457280                                  {product} {ergonomic}
+   size_t MaxHeapSize                              = 501219328                                 {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5826188                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122916026                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122916026                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 501219328                              {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:/Program Files/Java/jdk-13.0.2/bin/server;C:/Program Files/Java/jdk-13.0.2/bin;C:\Program Files\Java\jdk-13.0.2\bin;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter;C:\Program Files (x86)\Intel\TXE Components\TCS\;C:\Program Files\Intel\TXE Components\TCS\;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\TXE Components\DAL\;C:\Program Files (x86)\Intel\TXE Components\DAL\;C:\Program Files\Intel\TXE Components\IPT\;C:\Program Files (x86)\Intel\TXE Components\IPT\;C:\Program Files\Java\jdk1.8.0_73\bin;C:\windows\system32;
+USERNAME=osowa steve tega
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 76 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 10586 (10.0.10586.0)
+
+CPU:total 2 (initial active 2) (2 cores per cpu, 1 threads per core) family 6 model 76 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, aes, clmul, erms, 3dnowpref, tsc, tscinvbit
+
+Memory: 4k page, system-wide physical 1905M (204M free)
+TotalPageFile size 2325M (AvailPageFile size 5M)
+current process WorkingSet (physical memory assigned to process): 9M, peak: 9M
+current process commit charge ("private bytes"): 10M, peak: 11M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (13.0.2+8) for windows-amd64 JRE (13.0.2+8), built on Dec 11 2019 09:20:33 by "mach5one" with unknown MS VC++:1916
+
+END.
